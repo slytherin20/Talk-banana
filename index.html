@@ -5,13 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="app.js" async defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Banana Speak</title>
 </head>
 <body>
-    <h2>Talk Bananaaaaa 🍌</h2>
-    <textarea class="input-field" placeholder="Please enter text here which you want to translate in minion langauge"></textarea>
-    <h4>The translated text:</h4>
-    <textarea type="text" class="output-field" placeholder="Translated text will be displayed here"></textarea>
-    <button class="btn">Translate</button>
+
+    <h2 class="heading">Talk Bananaaaaa 🍌</h2>
+
+    <div class="input-container">
+        <h4 class="sub-heading">Enter the text here:</h4>
+        <textarea class="input-field" placeholder="Please enter text here which you want to translate in minion language"></textarea>    
+    </div>  
+
+    <div class="output-container">
+        <h4 class="sub-heading">The translated text:</h4>
+        <textarea type="text" class="output-field" placeholder="Translated text will be displayed here" disabled></textarea>
+        <button class="btn">Translate</button>
+    </div>
+
+    <footer class="about-section">
+        <p class="about-text">This is a fun translation app that lets your translate from English to minion language. Enter some text 
+            to checkout the translation. Have fun!!
+        </p>
+    </footer>
 </body>
 </html>
