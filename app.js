@@ -9,6 +9,9 @@ function createRequest(text){
     return `${apiURI}?text=${text}`
 }
 function handleError(error){
+    outputField.style.color="red";
+    outputField.style.fontSize = "1.5em";
+    outputField.innerText = "An error has occured. Please try again later."
     console.log("An error occured:"+error)
 }
 
@@ -17,7 +20,11 @@ function translateText(){
 
     fetch(requestURI)
     .then(response=> response.json())
-    .then(json => outputField.value = json.contents.translated)
+    .then(json => {
+        outputField.innerText = json.contents.translated
+        outputField.style.color="blue"
+        }
+        )
     .catch(handleError)
 }
 
